@@ -142,7 +142,7 @@ class BoardInterface:
 		                'apps_start_address': 0x10020000,
 		                'page_size': 4096,
 		                'openocd': 'external',
-		                'openocd_prefix': 'source [find interface/raspberrypi-swd.cfg]; \
+		                'openocd_prefix': 'source [find interface/raspberrypi-swd.cfg];\
 		                                   source [find target/rp2040.cfg];'},
 	}
 
