@@ -137,6 +137,13 @@ class BoardInterface:
 		                                   set WORKAREASIZE 0x40000; \
 		                                   $_TARGETNAME configure -work-area-phys 0x20000000 -work-area-size $WORKAREASIZE -work-area-backup 0; \
 		                                   flash bank $_CHIPNAME.flash nrf51 0x00000000 0 1 1 $_TARGETNAME;'},
+		'raspberry_pi_pico': {'description': 'Raspberry Pi Pico',
+		                'arch': 'cortex-m0+',
+		                'apps_start_address': 0x10020000,
+		                'page_size': 4096,
+		                'openocd': 'external',
+		                'openocd_prefix': 'source [find interface/raspberrypi-swd.cfg]; \
+		                                   source [find target/rp2040.cfg];'},
 	}
 
 	def __init__ (self, args):
